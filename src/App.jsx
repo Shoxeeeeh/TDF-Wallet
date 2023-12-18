@@ -5,6 +5,7 @@ import viteLogo from '/vite.svg'
 import { AuthContext, AuthProvider } from './Auth/AuthContext'
 import Login from './components/Login/Login'
 import Layout from './components/layout/layout'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 
 function App() {
@@ -15,9 +16,14 @@ function App() {
   
 
   return (
-    <>
-      <AuthProvider><Layout/></AuthProvider>
-    </>
+    
+    <AuthProvider>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Layout/>}/>
+        </Routes>
+    </Router>
+    </AuthProvider>
   )
 }
 

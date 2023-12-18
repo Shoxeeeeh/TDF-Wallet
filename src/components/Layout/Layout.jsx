@@ -4,6 +4,7 @@ import { AuthContext } from '../../Auth/AuthContext';
 import { types } from '../../types/types';
 import Login from '../Login/Login';
 import MainScreen from '../mainScreen/mainScreen';
+import Navbar from '../Navbar/Navbar'
 
 
 function Layout() {
