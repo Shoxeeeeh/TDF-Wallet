@@ -53,7 +53,7 @@ return(
                     </div>
                     {userError ? <h2 style={{color: "red"}}>Credenciales incorrectas!</h2> : null }
                     <div>
-                        <label>no tiene una cuenta?</label>
+                        <label>¿no tiene una cuenta?</label>
                         <a href="">cree una aqui!</a>
                     </div>
                 </form>    
