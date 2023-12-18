@@ -1,19 +1,31 @@
-import { AuthContext} from "../../Auth/AuthContext";
-import { useContext } from "react";
-import Login from "../Login/Login";
-import { types } from "../../types/types";
-import mainScreen from "../mainScreen/mainScreen";
+// Layout.js
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Auth/AuthContext';
+import { types } from '../../types/types';
+import Login from '../Login/Login';
+import MainScreen from '../mainScreen/mainScreen';
 
 
 function Layout() {
-    const {isLogged, dispatch} = useContext(AuthContext);
-return (
-<>
-{isLogged.logged ? <> <mainScreen/>
-<button onClick={() => {localStorage.removeItem('isLogged'),dispatch({type:types.logout})}}>Logout</button>
-</>: <Login/>}
-</>
-)
+  const { isLogged, dispatch } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    localStorage.removeItem('isLogged');
+    dispatch({ type: types.logout });
+  };
+
+  return (
+    <>
+      {isLogged.logged ? (
+        <>
+          <Navbar handleLogout={handleLogout} />
+          <MainScreen />
+        </>
+      ) : (
+        <Login />
+      )}
+    </>
+  );
 }
 
-export default Layout
+export default Layout;

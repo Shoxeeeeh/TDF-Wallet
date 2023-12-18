@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Estilos para posicionar la Navbar */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+li {
+  cursor: pointer;
+}
