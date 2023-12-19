@@ -4,6 +4,7 @@ import { LoginResponse } from "../../helpers/loginEndpoint";
 import { types } from "../../types/types";
 import { useContext } from "react";
 import { AuthContext } from "../../Auth/AuthContext";
+import { Link } from "react-router-dom";
 
 function Login (){
     
@@ -39,7 +40,6 @@ return(
     </div>
     <div className="container">
         <div className="formulario">
-                <h2>Ingrese a su cuenta!</h2>
                 <form onSubmit={handleSubmitLogin} className="formLogin">
                     <div>
                         <label>Ingrese su correo aqui!</label>
@@ -54,7 +54,7 @@ return(
                     {userError ? <h2 style={{color: "red"}}>Credenciales incorrectas!</h2> : null }
                     <div>
                         <label>¿no tiene una cuenta?</label>
-                        <a href="">cree una aqui!</a>
+                        <Link to='/register' style={{textDecoration:"underline"}}>cree una aqui!</Link>
                     </div>
                 </form>    
         </div>

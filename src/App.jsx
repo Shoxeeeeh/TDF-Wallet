@@ -6,7 +6,7 @@ import { AuthContext, AuthProvider } from './Auth/AuthContext'
 import Login from './components/Login/Login'
 import Layout from './components/layout/layout'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-
+import CreateUser from './components/CreateUser/CreateUser'
 
 function App() {
 
@@ -21,6 +21,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Layout/>}/>
+        <Route path='/register' element={<CreateUser/>}/>
         </Routes>
     </Router>
     </AuthProvider>

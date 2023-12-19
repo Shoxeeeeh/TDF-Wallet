@@ -86,7 +86,8 @@ const AccountCard = ({ money, id }) => {
               onChange={handleInputChange}
             />
           </label>
-          <label>
+          <br />
+          <label style={{ paddingLeft:'100px'}}>
             ID de la cuenta destino:
             <input
               type="text"
