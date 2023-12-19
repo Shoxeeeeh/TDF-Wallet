@@ -1,8 +1,10 @@
 // MainScreen.jsx
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import UserCard from '../UserCard/UserCard';
 import AccountCard from '../AccountCard/AccountCard';
+
 
 const MainScreen = () => {
   const [userData, setUserData] = useState(null);
@@ -21,21 +23,25 @@ const MainScreen = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex' }}>
-      <div style={{ flex: 1 }}>
-        <h1>Main Content</h1>
-        
-      </div>
-      <div style={{ width: '300px', marginLeft: '20px' }}>
+    <div className="container">
+      <div className="main-content">
+        <h1>Perfil de Usuario</h1>
+        <div className="side-cards">
         {userData ? (
           <>
-            <UserCard userId={userData.userId} />
-            <AccountCard money={userData.money} />
+            <div className="card1">
+              <UserCard userId={userData.userId} />
+            </div>
+            <div className="card2">
+              <AccountCard money={userData.money} />
+            </div>
           </>
         ) : (
-          <p>Cargando...</p>
+          <p className="loading">Cargando...</p>
         )}
       </div>
+      </div>
+      
     </div>
   );
 };
