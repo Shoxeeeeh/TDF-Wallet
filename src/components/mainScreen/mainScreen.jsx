@@ -33,7 +33,7 @@ const MainScreen = () => {
               <UserCard userId={userData.userId} />
             </div>
             <div className="card2">
-              <AccountCard money={userData.money} />
+              <AccountCard money={userData.money} id={userData.id} />
             </div>
           </>
         ) : (
