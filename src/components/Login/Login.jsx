@@ -35,10 +35,10 @@ function Login (){
 return(
 
 <div>
-    <div>
-        <h1>Bienvenido a TDF Wallet!</h1>
-    </div>
-    <div className="container">
+<div className="welcome-text">
+  <h1>Bienvenido a TDF Wallet!</h1>
+</div>
+    
         <div className="formulario">
                 <form onSubmit={handleSubmitLogin} className="formLogin">
                     <div>
@@ -58,7 +58,7 @@ return(
                     </div>
                 </form>    
         </div>
-    </div>
+  
 </div>
 );
 

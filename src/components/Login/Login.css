@@ -1,51 +1,67 @@
-body{
+body {
     text-align: center;
     justify-content: center;
     background-color: rgb(100, 100, 236);
     background-image: url(../../assets/2727376.svg);
-    background-size: 50% ;
-    background-repeat:no-repeat;
-}
-.conmtainer{
-    justify-content: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
     text-align: center;
-}
-
-form{
+    width: 100%; /* Añade esta línea para ocupar todo el ancho disponible */
+    box-sizing: border-box; /* Añade esta línea para incluir padding en el ancho */
+  }
+  
+  .welcome-text {
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade sombra al texto */
+    margin-bottom: 20px; /* Espaciado inferior para separar del formulario */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     border-radius: 6px;
-}
-.formLogin{
+  }
+  
+  .formLogin {
     background-color: rgba(255, 255, 255, 0.692);
-    justify-content: center;
     text-align: center;
-    align-items: center;
-    margin-left: 860px;
     color: rgb(207, 198, 198);
     border: 2px solid black;
-    width: 600px;
-    height:400px;
-}
-h1{
-    font-size: 50px;
-}
-h2{
+    width: 80%;
+    max-width: 600px;
+    margin: auto; /* Añade esta línea para centrar horizontalmente */
+    padding: 20px;
+    box-sizing: border-box; /* Añade esta línea para incluir padding en el ancho */
+  }
+  
+  h2 {
     color: rgb(255, 255, 255);
     margin: 10px;
-    justify-content: center;
     text-align: center;
-}
-
-.buttonSpace{
+  }
+  
+  .buttonSpace {
     margin: 10px;
-}
-input{
+  }
+  
+  input {
     height: 40px;
     margin: 9px;
-    width: 500px;
+    width: 80%;
+    max-width: 500px;
     border-radius: 6px;
-}
-button {
+  }
+  
+  button {
     margin: 20px;
     border-radius: 8px;
     border: 1px solid transparent;
@@ -56,21 +72,26 @@ button {
     background-color: #1a1a1a;
     cursor: pointer;
     transition: border-color 0.25s;
-}
-button:hover {
+  }
+  
+  button:hover {
     border-color: #fcfcfc;
   }
+  
   button:focus,
   button:focus-visible {
     outline: 6px auto -webkit-focus-ring-color;
   }
-  label{
+  
+  label {
     color: black;
     font-size: 1.4rem;
   }
-a{
+  
+  a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.973);
     margin: 10px;
     font-size: 20px;
-}
+  }
+  
